@@ -1,0 +1,89 @@
+$belaBoja: #fff;
+$crnaBoja:#1c353c;
+$sivaBoja: #BEBEBE	;
+$velicinaNaslova: 25px;
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+@mixin fleks {
+    display: flex;
+    flex-wrap: wrap;
+}
+.center-block{
+    width: 80%;
+    margin: 0px auto;
+}
+header{
+    nav{
+        ul{
+            margin-top: 20px;
+            list-style-type: none;
+            li{
+                margin: 0px 10px;
+                a{
+                    text-decoration: none;
+                    color: $crnaBoja;
+                    font-size: 20px;
+                }               
+            }
+            }
+        }
+    }
+#cover{
+    width: 100%;
+    margin-top: 20px;
+    background-color:$sivaBoja;
+}
+.d-flex{
+    @include fleks;
+}
+.space-between{
+    justify-content: space-between;
+}
+#cover-photo{
+    padding: 20px;
+    width: 40%;
+    img{
+        width: 100%;
+    }
+}
+#cover-text{
+   @extend #cover-photo;
+    color: $crnaBoja;
+    margin-top: 8%;
+    h1{
+        font-size: 48px;
+        text-align: center;
+    }
+    p{
+        font-size: 30px;
+        text-align: center;
+    }
+}
+.jc-flex-end{
+    justify-content: flex-end;
+}
+.jc-center{
+    justify-content: center;
+}
+#about-photo{
+    width: 40%;
+    padding: 20px;
+   
+}
+#about-text{
+    @extend #cover-photo;
+    p{
+        font-size: 20px;
+        text-align: center;
+        margin-top: 40px;
+    }
+}
+.heading{
+    font-size: 30px;
+    color: $crnaBoja;
+    text-align: center;
+    padding: 10px;
+}
